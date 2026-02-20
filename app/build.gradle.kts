@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.ezhar.jetpack_compose_android"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.ezhar.jetpack_compose_android"
