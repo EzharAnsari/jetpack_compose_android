@@ -35,8 +35,8 @@ fun StateInComposition(modifier: Modifier = Modifier) {
     // rememberSaveable -> remember the value and don't depend on onCreate function. If we rotate the screen value of variable will still be the old one.
 }
 
-@Composable
+/*@Composable
 @Preview(showSystemUi = true)
 fun Prev() {
     StateInComposition()
-}
+}*/
