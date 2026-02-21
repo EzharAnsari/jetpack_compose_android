@@ -12,23 +12,23 @@ This project contains **3 screens**:
 
 ## 📱 Screenshots
 
-### 🚀 Splash Screen
+<div align="center">
 
-![Splash Screen](./screenshots/splash.png)
+<img src="./screenshots/splash.png" width="250" height="450"/>
+<img src="./screenshots/welcome.png" width="250" height="450"/>
+<img src="./screenshots/home.png" width="250" height="450"/>
 
-### 👋 Welcome Screen
+</div>
 
-![Welcome Screen](./screenshots/welcome.png)
-
-### 🏠 Home Screen
-
-![Home Screen](./screenshots/home.png)
-
-> 💡 Place your screenshots inside a folder named `screenshots` in your project root and rename them:
+> 💡 Place your screenshots inside a folder named `screenshots` in your project root:
 >
-> * splash.png
-> * welcome.png
-> * home.png
+> ```
+> project-root/
+> ├── screenshots/
+> │   ├── splash.png
+> │   ├── welcome.png
+> │   └── home.png
+> ```
 
 ---
 
@@ -38,102 +38,60 @@ This project helped me understand and practice the following Jetpack Compose con
 
 ---
 
-## 🔹 1. Jetpack Compose Basics
+## 🔹 Jetpack Compose Basics
 
 * `@Composable` functions
 * `Column`, `Row`, `Box` layouts
 * `Modifier` usage
-* `padding`, `fillMaxSize`, `background`, `size`
 * `Alignment` and `Arrangement`
+* UI structuring best practices
 
 ---
 
-## 🔹 2. Navigation in Compose
+## 🔹 Navigation in Compose
 
-* Using `NavController`
-* Setting up `NavHost`
-* Creating routes
-* Navigating between screens
-* Clearing back stack using `popUpTo`
-* Managing screen flow (Splash → Welcome → Home)
-
----
-
-## 🔹 3. Splash Screen Logic
-
-* Using `LaunchedEffect`
-* Coroutine `delay()`
-* Animations using:
-
-    * `Animatable`
-    * `tween`
-    * `OvershootInterpolator`
-* Scale animation on logo
+* `NavController`
+* `NavHost`
+* Route management
+* Screen transitions
+* `popUpTo()` for back stack control
 
 ---
 
-## 🔹 4. Gradient UI Design
+## 🔹 Splash Screen & Animation
 
-* Using `Brush.verticalGradient`
-* Creating modern gradient backgrounds
-* Using `colorStops`
-* Applying gradients with `.background(brush)`
+* `LaunchedEffect`
+* `delay()`
+* `Animatable`
+* `tween()`
+* `OvershootInterpolator`
+* Scale animation effects
 
 ---
 
-## 🔹 5. UI Components
+## 🔹 Gradient & Modern UI Design
+
+* `Brush.verticalGradient`
+* `colorStops`
+* Applying gradient backgrounds
+* Modern minimal UI principles
+
+---
+
+## 🔹 Reusable Components
 
 * `Card`
 * `LazyRow`
-* Custom Search Bar UI
-* Icons from `Icons.Default`
-* Rounded shapes using `RoundedCornerShape`
-* Circle background using `CircleShape`
+* Custom product cards
+* Composable reusability
 
 ---
 
-## 🔹 6. Data Modeling in Kotlin
+## 🔹 Data Modeling
 
-* Creating a `data class`
-* Using `listOf()` and `mutableListOf()`
-* Passing model data into composables
-* Rendering dynamic UI using `LazyRow`
-
----
-
-## 🔹 7. State & Recomposition
-
-* Understanding `remember`
-* Animating state values
-* Handling recomposition properly
-
----
-
-## 🔹 8. Clean UI Structure
-
-* Separating screens into different files
-* Organizing project structure
-* Reusable composables (`RecommendedComboCard`)
-
----
-
-# 📂 Project Structure
-
-```
-com.ezhar.jetpack_compose_android
-│
-├── MainActivity.kt
-│
-├── screens/
-│   ├── SplashScreen.kt
-│   ├── WelcomeScreen.kt
-│   └── HomeScreen.kt
-│
-├── model/
-│   └── FruitCombo.kt
-│
-└── ui/theme/
-```
+* `data class`
+* `listOf()` / `mutableListOf()`
+* Dynamic UI rendering
 
 ---
 
@@ -142,26 +100,16 @@ com.ezhar.jetpack_compose_android
 ```
 App Launch
    ↓
-Splash Screen (2 seconds delay + animation)
+Splash Screen (2 sec animation)
    ↓
-Welcome Screen (Button Click)
+Welcome Screen
    ↓
 Home Screen
 ```
 
 ---
 
-# 🎨 UI Highlights
-
-* Modern gradient splash screen
-* Clean onboarding layout
-* Card-based product listing
-* Horizontal scrolling combos
-* Minimal & modern design style
-
----
-
-# 🛠️ Built With
+# 🛠 Built With
 
 * Kotlin
 * Jetpack Compose
@@ -173,12 +121,12 @@ Home Screen
 
 # 🚀 Future Improvements
 
-* Add ViewModel (MVVM Architecture)
-* Add Cart functionality
-* Add Favorites state handling
-* Add Search functionality
-* Add animations between screens
-* Add backend / Firebase integration
+* MVVM Architecture
+* ViewModel integration
+* Cart functionality
+* Favorites feature
+* Search functionality
+* API integration
 
 ---
 
