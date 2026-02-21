@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Jetpack_compose_androidTheme {
 
-                    CountScreen()
+                    StateInComposition()
             }
         }
     }
