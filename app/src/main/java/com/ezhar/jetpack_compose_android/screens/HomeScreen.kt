@@ -37,6 +37,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ezhar.jetpack_compose_android.R
+import com.ezhar.jetpack_compose_android.getFruitComboData
 
 @Composable
 fun HomeScreen(modifier: Modifier = Modifier) {
@@ -133,11 +134,19 @@ fun HomeScreen(modifier: Modifier = Modifier) {
             horizontalArrangement = Arrangement.spacedBy(16.dp),
             modifier = Modifier.padding(bottom = 32.dp)
         ) {
-            items(count = 2) { index ->
+            var listFruitCombo = getFruitComboData()
+            /*items(count = 2) { index ->
                 RecommendedComboCard(
                     name = if (index == 0) "Honey Limb Combo" else "Berry Mango Combo",
                     price = if (index == 0) "$100" else "$75",
                     imageRes = if (index == 0) R.drawable.food_1 else R.drawable.food_2
+                )
+            }*/
+            items(listFruitCombo) {fruitCombe ->
+                RecommendedComboCard(
+                    name = fruitCombe.name,
+                    price = fruitCombe.price,
+                    imageRes = fruitCombe.imageRes
                 )
             }
         }
