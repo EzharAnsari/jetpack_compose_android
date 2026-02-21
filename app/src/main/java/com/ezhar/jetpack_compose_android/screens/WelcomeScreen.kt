@@ -27,10 +27,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.ezhar.jetpack_compose_android.R
 
 @Composable
-fun WelcomeScreen(modifier: Modifier = Modifier) {
+fun WelcomeScreen(navController: NavController) {
 
     val gradientBrush = Brush.verticalGradient(
         colors = listOf(
@@ -115,7 +116,13 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
                 Spacer(modifier= Modifier.height(26.dp))
 
                 Button(
-                    onClick = {},
+                    onClick = {
+                        navController.navigate("HomeScreen") {
+                            popUpTo("WelcomeScreen") {
+                                inclusive = true
+                            }
+                        }
+                    },
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(56.dp),
@@ -138,8 +145,9 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
     }
 }
 
+/*
 @Composable
 @Preview(showBackground = true)
 fun WelcomeScreenPrev(modifier: Modifier = Modifier) {
     WelcomeScreen()
-}
+}*/

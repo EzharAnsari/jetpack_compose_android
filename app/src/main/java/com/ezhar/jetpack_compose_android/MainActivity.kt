@@ -12,6 +12,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.ezhar.jetpack_compose_android.screens.HomeScreen
+import com.ezhar.jetpack_compose_android.screens.SplashScr
+import com.ezhar.jetpack_compose_android.screens.WelcomeScreen
 import com.ezhar.jetpack_compose_android.ui.theme.Jetpack_compose_androidTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +27,26 @@ class MainActivity : ComponentActivity() {
         setContent {
             Jetpack_compose_androidTheme {
 
-                    StateInComposition()
+                val navController = rememberNavController()
+
+                NavHost(
+                    navController = navController,
+                    startDestination = "SplashScr"
+                ) {
+                    composable("SplashScr") {
+                        SplashScr(navController = navController)
+                    }
+
+                    composable("WelcomeScreen") {
+                        WelcomeScreen(navController = navController)
+                    }
+
+                    composable("HomeScreen") {
+                        HomeScreen()
+                    }
+                }
+
+//                    StateInComposition()
             }
         }
     }
